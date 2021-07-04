@@ -55,7 +55,7 @@ __device__ void LaunchPhoton(FotonStruct* p)
 
 }
 
-__global__ void FOTON(float* heat, float* heat2, curandStatePhilox4_32_10_t *state, unsigned long long *fotones_simulados, FotonStruct* pp)
+__global__ void simulador(float* heat, float* heat2, curandStatePhilox4_32_10_t *state, unsigned long long *fotones_simulados, FotonStruct* pp)
 {
 
   int id = threadIdx.x + blockIdx.x * blockDim.x;
